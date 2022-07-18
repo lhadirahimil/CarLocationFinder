@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hadirahimi.locationFinder.ui.activity.InsertActivity.InsertActivity">
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/iran_yekan_medium"
+        android:text="ثبت مکان جدید"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/_10mdp"
+        android:layout_marginRight="@dimen/_10mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader">
+
+        <TextView
+            android:id="@+id/tvChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/iran_yekan_medium"
+            android:text="ثبت مکان جدید"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.55"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChoose">
+
+            <org.neshan.mapsdk.MapView
+                android:id="@+id/mapNeshan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnFindMyLocation"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/btn_red"
+            android:drawableRight="@drawable/ic_location"
+            android:fontFamily="@font/iran_yekan_medium"
+            android:padding="10dp"
+            android:text="@string/find_my_location"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="@id/cardMapLayout"
+            app:layout_constraintRight_toRightOf="@id/cardMapLayout"
+            app:layout_constraintTop_toBottomOf="@id/cardMapLayout" />
+
+        <TextView
+            android:id="@+id/tvMyAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/iran_yekan_medium"
+            android:gravity="right"
+            android:visibility="visible"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnFindMyLocation"
+            tools:text="آدرس : باغستان باغستان باغستان " />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:enabled="false"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_red"
+            android:fontFamily="@font/iran_yekan_medium"
+            android:text="ثبت مکان"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/btnBack"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMyAddress" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_red_border"
+            android:fontFamily="@font/iran_yekan_medium"
+            android:text="بازگشت"
+            android:textColor="@color/red"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btnSubmit"
+            app:layout_constraintTop_toBottomOf="@id/tvMyAddress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

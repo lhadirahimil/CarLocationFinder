@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">parkFinder</string>
+    <string name="my_locations">مکان های من</string>
+    <string name="my_car_locations">لوکیشن خودرو من</string>
+    <string name="find_my_location">برو به موقعیت من</string>
+    <string name="save_new_location">ثبت مکان پارک</string>
+    <string name="delete_location">حذف مکان</string>
+    <string name="delete_description">میخوای این مکان رو حذف کنی ؟</string>
+    <string name="submit_location">ثبت مکان</string>
+    <string name="cancel">لغو</string>
+    <string name="firstLocation">اولین لوکیشن خود را ثبت کنید</string>
+</resources>
